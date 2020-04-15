@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994E6244781CE00CF02B8 /* AppDelegate.swift */; };
 		DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */; };
-		DEB994EB244781CE00CF02B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994EA244781CE00CF02B8 /* ViewController.swift */; };
 		DEB994EE244781CE00CF02B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB994EC244781CE00CF02B8 /* Main.storyboard */; };
 		DEB994F0244781D600CF02B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB994EF244781D600CF02B8 /* Assets.xcassets */; };
 		DEB994F3244781D600CF02B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */; };
 		DEB994FE244781D600CF02B8 /* CleanFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */; };
+		DEB9950B2447825300CF02B8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */; };
+		DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950C2447827700CF02B8 /* WelcomeModels.swift */; };
+		DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */; };
+		DEB99511244787C800CF02B8 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB99510244787C800CF02B8 /* WelcomePresenter.swift */; };
+		DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */; };
+		DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951524479EBD00CF02B8 /* MockDatabase.swift */; };
+		DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB995182447A33500CF02B8 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +36,6 @@
 		DEB994E3244781CE00CF02B8 /* CleanFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB994E6244781CE00CF02B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEB994EA244781CE00CF02B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEB994ED244781CE00CF02B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEB994EF244781D600CF02B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEB994F2244781D600CF02B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +43,13 @@
 		DEB994F9244781D600CF02B8 /* CleanFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanFlowTests.swift; sourceTree = "<group>"; };
 		DEB994FF244781D600CF02B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DEB9950C2447827700CF02B8 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
+		DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
+		DEB99510244787C800CF02B8 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
+		DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
+		DEB9951524479EBD00CF02B8 /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
+		DEB995182447A33500CF02B8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +91,10 @@
 		DEB994E5244781CE00CF02B8 /* CleanFlow */ = {
 			isa = PBXGroup;
 			children = (
+				DEB9951424479EAC00CF02B8 /* Shared */,
+				DEB995082447823600CF02B8 /* Scenes */,
 				DEB994E6244781CE00CF02B8 /* AppDelegate.swift */,
 				DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */,
-				DEB994EA244781CE00CF02B8 /* ViewController.swift */,
 				DEB994EC244781CE00CF02B8 /* Main.storyboard */,
 				DEB994EF244781D600CF02B8 /* Assets.xcassets */,
 				DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */,
@@ -97,6 +110,43 @@
 				DEB994FF244781D600CF02B8 /* Info.plist */,
 			);
 			path = CleanFlowTests;
+			sourceTree = "<group>";
+		};
+		DEB995082447823600CF02B8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DEB995092447823F00CF02B8 /* Welcome */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DEB995092447823F00CF02B8 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */,
+				DEB9950C2447827700CF02B8 /* WelcomeModels.swift */,
+				DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */,
+				DEB99510244787C800CF02B8 /* WelcomePresenter.swift */,
+				DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		DEB9951424479EAC00CF02B8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DEB995172447A2BB00CF02B8 /* Extensions */,
+				DEB9951524479EBD00CF02B8 /* MockDatabase.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DEB995172447A2BB00CF02B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DEB995182447A33500CF02B8 /* UIViewController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +250,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB994EB244781CE00CF02B8 /* ViewController.swift in Sources */,
+				DEB9950B2447825300CF02B8 /* WelcomeViewController.swift in Sources */,
+				DEB99511244787C800CF02B8 /* WelcomePresenter.swift in Sources */,
+				DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */,
+				DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */,
 				DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */,
+				DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */,
+				DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */,
 				DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */,
+				DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HR54FA3Z7;
 				INFOPLIST_FILE = CleanFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2HR54FA3Z7;
 				INFOPLIST_FILE = CleanFlow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
