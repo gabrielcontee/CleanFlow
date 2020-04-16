@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE4CB1E72448D1D4009DE7B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */; };
+		DE4CB1E82448D1D4009DE7B5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */; };
+		DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */; };
+		DE4CB1EE2448E178009DE7B5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1EC2448E178009DE7B5 /* DashboardViewController.swift */; };
+		DE4CB1EF2448E178009DE7B5 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4CB1ED2448E178009DE7B5 /* DashboardViewController.xib */; };
+		DE4CB1F12448E316009DE7B5 /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F02448E316009DE7B5 /* DashboardInteractor.swift */; };
+		DE4CB1F32448E3F0009DE7B5 /* DashboardModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F22448E3F0009DE7B5 /* DashboardModels.swift */; };
+		DE4CB1F62448E45F009DE7B5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F52448E45F009DE7B5 /* Profile.swift */; };
+		DE4CB1F82448F9BB009DE7B5 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */; };
+		DE4CB1FA244903FA009DE7B5 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */; };
 		DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994E6244781CE00CF02B8 /* AppDelegate.swift */; };
 		DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */; };
-		DEB994EE244781CE00CF02B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB994EC244781CE00CF02B8 /* Main.storyboard */; };
 		DEB994F0244781D600CF02B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB994EF244781D600CF02B8 /* Assets.xcassets */; };
 		DEB994F3244781D600CF02B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */; };
 		DEB994FE244781D600CF02B8 /* CleanFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */; };
-		DEB9950B2447825300CF02B8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */; };
 		DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950C2447827700CF02B8 /* WelcomeModels.swift */; };
 		DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */; };
 		DEB99511244787C800CF02B8 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB99510244787C800CF02B8 /* WelcomePresenter.swift */; };
 		DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */; };
 		DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951524479EBD00CF02B8 /* MockDatabase.swift */; };
 		DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB995182447A33500CF02B8 /* UIViewController.swift */; };
+		DEB9951B2448978500CF02B8 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,23 +42,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewConfigurator.swift; sourceTree = "<group>"; };
+		DE4CB1EC2448E178009DE7B5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		DE4CB1ED2448E178009DE7B5 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		DE4CB1F02448E316009DE7B5 /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		DE4CB1F22448E3F0009DE7B5 /* DashboardModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModels.swift; sourceTree = "<group>"; };
+		DE4CB1F52448E45F009DE7B5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
 		DEB994E3244781CE00CF02B8 /* CleanFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB994E6244781CE00CF02B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEB994ED244781CE00CF02B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEB994EF244781D600CF02B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEB994F2244781D600CF02B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB994F4244781D600CF02B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB994F9244781D600CF02B8 /* CleanFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanFlowTests.swift; sourceTree = "<group>"; };
 		DEB994FF244781D600CF02B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DEB9950C2447827700CF02B8 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
 		DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
 		DEB99510244787C800CF02B8 /* WelcomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
 		DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeWorker.swift; sourceTree = "<group>"; };
 		DEB9951524479EBD00CF02B8 /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
 		DEB995182447A33500CF02B8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE4CB1EB2448D8D5009DE7B5 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				DE4CB1EC2448E178009DE7B5 /* DashboardViewController.swift */,
+				DE4CB1ED2448E178009DE7B5 /* DashboardViewController.xib */,
+				DE4CB1F02448E316009DE7B5 /* DashboardInteractor.swift */,
+				DE4CB1F22448E3F0009DE7B5 /* DashboardModels.swift */,
+				DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */,
+				DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		DE4CB1F42448E454009DE7B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE4CB1F52448E45F009DE7B5 /* Profile.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DEB994DA244781CE00CF02B8 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +134,6 @@
 				DEB995082447823600CF02B8 /* Scenes */,
 				DEB994E6244781CE00CF02B8 /* AppDelegate.swift */,
 				DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */,
-				DEB994EC244781CE00CF02B8 /* Main.storyboard */,
 				DEB994EF244781D600CF02B8 /* Assets.xcassets */,
 				DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */,
 				DEB994F4244781D600CF02B8 /* Info.plist */,
@@ -115,6 +153,7 @@
 		DEB995082447823600CF02B8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DE4CB1EB2448D8D5009DE7B5 /* Dashboard */,
 				DEB995092447823F00CF02B8 /* Welcome */,
 			);
 			path = Scenes;
@@ -123,11 +162,14 @@
 		DEB995092447823F00CF02B8 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				DEB9950A2447825300CF02B8 /* WelcomeViewController.swift */,
+				DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */,
+				DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */,
 				DEB9950C2447827700CF02B8 /* WelcomeModels.swift */,
 				DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */,
 				DEB99510244787C800CF02B8 /* WelcomePresenter.swift */,
 				DEB9951224478ABE00CF02B8 /* WelcomeWorker.swift */,
+				DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */,
+				DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -135,6 +177,7 @@
 		DEB9951424479EAC00CF02B8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DE4CB1F42448E454009DE7B5 /* Models */,
 				DEB995172447A2BB00CF02B8 /* Extensions */,
 				DEB9951524479EBD00CF02B8 /* MockDatabase.swift */,
 			);
@@ -231,8 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB994F3244781D600CF02B8 /* LaunchScreen.storyboard in Resources */,
+				DE4CB1E82448D1D4009DE7B5 /* WelcomeViewController.xib in Resources */,
 				DEB994F0244781D600CF02B8 /* Assets.xcassets in Resources */,
-				DEB994EE244781CE00CF02B8 /* Main.storyboard in Resources */,
+				DE4CB1EF2448E178009DE7B5 /* DashboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB9950B2447825300CF02B8 /* WelcomeViewController.swift in Sources */,
 				DEB99511244787C800CF02B8 /* WelcomePresenter.swift in Sources */,
+				DE4CB1F62448E45F009DE7B5 /* Profile.swift in Sources */,
+				DE4CB1E72448D1D4009DE7B5 /* WelcomeViewController.swift in Sources */,
+				DE4CB1F82448F9BB009DE7B5 /* DashboardPresenter.swift in Sources */,
 				DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */,
+				DEB9951B2448978500CF02B8 /* WelcomeRouter.swift in Sources */,
 				DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */,
 				DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */,
 				DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */,
+				DE4CB1EE2448E178009DE7B5 /* DashboardViewController.swift in Sources */,
+				DE4CB1F12448E316009DE7B5 /* DashboardInteractor.swift in Sources */,
+				DE4CB1FA244903FA009DE7B5 /* DashboardRouter.swift in Sources */,
 				DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */,
+				DE4CB1F32448E3F0009DE7B5 /* DashboardModels.swift in Sources */,
 				DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */,
+				DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */,
 				DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DEB994EC244781CE00CF02B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEB994ED244781CE00CF02B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -13,34 +13,35 @@ protocol WelcomeBusinessLogic {
     func register(request: Welcome.Register.Request)
 }
 
+protocol WelcomeDataStore {
+    var name: String? { get set }
+}
 
-//protocol WelcomeDataStore {
-//
-//}
-
-class WelcomeInteractor: WelcomeBusinessLogic {
+class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     
     var worker: WelcomeWorker?
-    var presenter: WelcomePresenter?
+    var presenter: WelcomePresenterLogic?
+    
+    var name: String?
     
     func login(request: Welcome.Login.Request) {
         guard let name = request.name, let password = request.password else {
             let response = Welcome.Login.Response(success: false, message: "Missing fields")
-            presenter?.presentLogin(response: response)
+            presenter?.presentLogin(name: "", response: response)
             return
         }
         
         guard let response = worker?.authenticateLogin(name: name, password: password) else {
             let response = Welcome.Login.Response(success: false, message: "Internal error")
-            presenter?.presentLogin(response: response)
+            presenter?.presentLogin(name: "", response: response)
             return
         }
         
-        presenter?.presentLogin(response: response)
+        self.name = name
+        presenter?.presentLogin(name: name, response: response)
     }
     
     func register(request: Welcome.Register.Request) {
         
     }
-    
 }

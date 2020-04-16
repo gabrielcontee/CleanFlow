@@ -22,6 +22,7 @@ enum Welcome {
         }
         
         struct ViewModel {
+            var name: String
             var success: Bool
             var message: String?
         }
