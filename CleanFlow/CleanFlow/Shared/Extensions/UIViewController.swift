@@ -12,6 +12,9 @@ extension UIViewController {
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message:
             message, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {
+            action in
+        }))
         self.present(alertController, animated: true, completion: nil)
     }
     
@@ -20,7 +23,7 @@ extension UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

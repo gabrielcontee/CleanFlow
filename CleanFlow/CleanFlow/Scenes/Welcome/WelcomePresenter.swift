@@ -24,7 +24,8 @@ class WelcomePresenter: WelcomePresenterLogic {
     }
     
     func presentRegister(response: Welcome.Register.Response) {
-        
+        let viewModel = Welcome.Register.ViewModel(success: response.success, message: response.message)
+        viewController?.displayRegister(viewModel: viewModel)
     }
     
 }

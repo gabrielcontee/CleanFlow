@@ -20,6 +20,11 @@ class WelcomeWorker: NSObject {
         }
     }
     
+    // TO DO
+//    func registerUser(name: String, password: String) -> Welcome.Register.Response {
+//
+//    }
+    
     func saveUser(_ name: String)
     {
       UserDefaults.standard.set(name, forKey: nameDefaultsKey)
