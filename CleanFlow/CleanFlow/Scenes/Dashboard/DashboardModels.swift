@@ -16,10 +16,12 @@ enum Dashboard {
         
         struct Response {
             var profile: Profile
+            var userObjects: [String]
         }
         
         struct ViewModel {
             var name: String
+            var userObjects: [String]
         }
     }
     

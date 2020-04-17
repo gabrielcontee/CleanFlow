@@ -18,7 +18,7 @@ class DashboardPresenter: DashboardPresentLogic {
     
     func presentProfile(response: Dashboard.GetProfile.Response) {
         
-        let viewModel = Dashboard.GetProfile.ViewModel(name: response.profile.name)
-        viewController?.displayProfile(viewModel: viewModel)
+        let viewModel = Dashboard.GetProfile.ViewModel(name: "Bem vindo \(response.profile.name)", userObjects: response.userObjects)
+        viewController?.displayProfileData(viewModel: viewModel)
     }
 }

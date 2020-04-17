@@ -28,7 +28,17 @@ class WelcomeViewConfigurator {
         router.dataStore = interactor
 
         let nav = UINavigationController(rootViewController: viewController)
+        
+        visualSetup()
+        
         window.rootViewController = nav
+    }
+    
+    private func visualSetup() {
+        viewController.title = "Login"
+        viewController.navigationController?.navigationBar.prefersLargeTitles = true
+        viewController.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        viewController.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
 }
 

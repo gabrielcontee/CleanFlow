@@ -32,7 +32,6 @@ final class MockDatabase: NSObject {
             "Hat",
             "Knife"
         ],
-        "joe": [
-        ]
+        "joe": []
     ]
 }

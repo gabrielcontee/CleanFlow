@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */; };
 		DE4CB1E72448D1D4009DE7B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */; };
 		DE4CB1E82448D1D4009DE7B5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */; };
 		DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
 		DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewConfigurator.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				DE4CB1F22448E3F0009DE7B5 /* DashboardModels.swift */,
 				DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */,
 				DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */,
+				DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -153,8 +156,8 @@
 		DEB995082447823600CF02B8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				DE4CB1EB2448D8D5009DE7B5 /* Dashboard */,
 				DEB995092447823F00CF02B8 /* Welcome */,
+				DE4CB1EB2448D8D5009DE7B5 /* Dashboard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				DEB9951B2448978500CF02B8 /* WelcomeRouter.swift in Sources */,
 				DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */,
 				DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */,
+				DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */,
 				DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */,
 				DE4CB1EE2448E178009DE7B5 /* DashboardViewController.swift in Sources */,
 				DE4CB1F12448E316009DE7B5 /* DashboardInteractor.swift in Sources */,

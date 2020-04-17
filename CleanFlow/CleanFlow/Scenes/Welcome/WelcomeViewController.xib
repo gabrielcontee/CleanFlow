@@ -19,53 +19,67 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="chq-Cz-m8c">
-                    <rect key="frame" x="52" y="337.5" width="310.5" height="221"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbf-wP-cUv">
+                    <rect key="frame" x="83" y="722" width="248" height="42"/>
+                    <color key="backgroundColor" red="0.83828800920000002" green="0.72679811719999998" blue="0.58820956950000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="hdh-JN-EMP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="f0P-Tg-ATe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qP-Ae-683">
+                    <rect key="frame" x="83" y="788" width="248" height="42"/>
+                    <color key="backgroundColor" red="0.83828800920000002" green="0.72679811719999998" blue="0.58820956950000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="DGj-y2-zNG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Register">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="registerPressed:" destination="-1" eventType="touchUpInside" id="Yp8-CQ-sy2"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="chq-Cz-m8c">
+                    <rect key="frame" x="52" y="402" width="310.5" height="92"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-Pu-qXp">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-Pu-qXp">
                             <rect key="frame" x="0.0" y="0.0" width="310.5" height="34"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-xC-qxQ">
-                            <rect key="frame" x="0.0" y="63" width="310.5" height="34"/>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6a-xC-qxQ">
+                            <rect key="frame" x="0.0" y="58" width="310.5" height="34"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbf-wP-cUv">
-                            <rect key="frame" x="0.0" y="126" width="310.5" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Login"/>
-                            <connections>
-                                <action selector="loginPressed:" destination="-1" eventType="touchUpInside" id="f0P-Tg-ATe"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qP-Ae-683">
-                            <rect key="frame" x="0.0" y="188" width="310.5" height="33"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <state key="normal" title="Register"/>
-                            <connections>
-                                <action selector="registerPressed:" destination="-1" eventType="touchUpInside" id="Yp8-CQ-sy2"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
                         <constraint firstItem="B6a-xC-qxQ" firstAttribute="leading" secondItem="chq-Cz-m8c" secondAttribute="leading" id="1gv-Sd-dwY"/>
                         <constraint firstAttribute="trailing" secondItem="B6a-xC-qxQ" secondAttribute="trailing" id="DQV-Xg-PFx"/>
-                        <constraint firstItem="Fbf-wP-cUv" firstAttribute="leading" secondItem="chq-Cz-m8c" secondAttribute="leading" id="Jd4-Mr-4xK"/>
-                        <constraint firstAttribute="trailing" secondItem="Fbf-wP-cUv" secondAttribute="trailing" id="OYf-Cc-qJF"/>
-                        <constraint firstAttribute="trailing" secondItem="6qP-Ae-683" secondAttribute="trailing" id="Rtu-D2-F8m"/>
-                        <constraint firstItem="6qP-Ae-683" firstAttribute="leading" secondItem="chq-Cz-m8c" secondAttribute="leading" id="g6t-W2-zo4"/>
                         <constraint firstItem="eO6-Pu-qXp" firstAttribute="leading" secondItem="chq-Cz-m8c" secondAttribute="leading" id="oDw-5k-Oaq"/>
                         <constraint firstAttribute="trailing" secondItem="eO6-Pu-qXp" secondAttribute="trailing" id="vF5-sG-pBG"/>
                     </constraints>
                 </stackView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.1615738571" green="0.1989199519" blue="0.28236377239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="6qP-Ae-683" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8X2-0l-Hrg"/>
+                <constraint firstItem="6qP-Ae-683" firstAttribute="width" secondItem="Fbf-wP-cUv" secondAttribute="width" id="O1k-3L-dPG"/>
+                <constraint firstItem="Fbf-wP-cUv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="Soc-AY-HKp"/>
+                <constraint firstItem="Fbf-wP-cUv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UE4-HP-S1T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6qP-Ae-683" secondAttribute="bottom" constant="32" id="V9Y-W2-Kod"/>
                 <constraint firstItem="chq-Cz-m8c" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dr8-vU-2xp"/>
+                <constraint firstItem="6qP-Ae-683" firstAttribute="top" secondItem="Fbf-wP-cUv" secondAttribute="bottom" constant="24" id="lF7-ZU-n2J"/>
                 <constraint firstItem="chq-Cz-m8c" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="oGm-Lq-tkV"/>
                 <constraint firstItem="chq-Cz-m8c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="z4W-69-7Wo"/>
             </constraints>

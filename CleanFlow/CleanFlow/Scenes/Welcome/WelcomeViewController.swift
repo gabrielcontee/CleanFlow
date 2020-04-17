@@ -26,8 +26,7 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
         interactor?.login(request: loginRequest)
     }
     
-    @IBAction func registerPressed(_ sender: Any) {
-    }
+    @IBAction func registerPressed(_ sender: Any) {}
     
     func displayLogin(viewModel: Welcome.Login.ViewModel) {
         if viewModel.success {
@@ -37,7 +36,5 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
         }
     }
     
-    func displayRegister(viewModel: Welcome.Register.ViewModel) {
-        
-    }
+    func displayRegister(viewModel: Welcome.Register.ViewModel) {}
 }

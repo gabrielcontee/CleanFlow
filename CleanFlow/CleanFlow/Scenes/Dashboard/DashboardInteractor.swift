@@ -16,8 +16,9 @@ protocol DashboardDataStore: class {
 }
 
 class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
-    
+
     var presenter: DashboardPresentLogic?
+    var worker: DashboardWorker?
     
     var profile: Profile?
     
@@ -26,7 +27,10 @@ class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
         guard let userProfile = profile else {
             return
         }
-        let response = Dashboard.GetProfile.Response(profile: userProfile)
+        
+        let userData = worker?.getUserData(name: userProfile.name)
+        
+        let response = Dashboard.GetProfile.Response(profile: userProfile, userObjects: userData?.userObjects ?? [])
         presenter?.presentProfile(response: response)
     }
 
