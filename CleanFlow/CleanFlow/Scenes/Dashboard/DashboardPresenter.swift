@@ -14,7 +14,7 @@ protocol DashboardPresentLogic: class {
 
 class DashboardPresenter: DashboardPresentLogic {
     
-    weak var viewController: DashboardViewController?
+    weak var viewController: DashboardDisplayLogic?
     
     func presentProfile(response: Dashboard.GetProfile.Response) {
         

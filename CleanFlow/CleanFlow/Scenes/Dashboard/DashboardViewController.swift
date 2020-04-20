@@ -92,6 +92,16 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
 
 }
 
+private struct Const {
+    static let ImageSizeForLargeState: CGFloat = 40
+    static let ImageRightMargin: CGFloat = 16
+    static let ImageBottomMarginForLargeState: CGFloat = 12
+    static let ImageBottomMarginForSmallState: CGFloat = 6
+    static let ImageSizeForSmallState: CGFloat = 32
+    static let NavBarHeightSmallState: CGFloat = 44
+    static let NavBarHeightLargeState: CGFloat = 96.5
+}
+
 extension DashboardViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,14 +121,4 @@ extension DashboardViewController: UITableViewDataSource {
         return cell
     }
     
-}
-
-private struct Const {
-    static let ImageSizeForLargeState: CGFloat = 40
-    static let ImageRightMargin: CGFloat = 16
-    static let ImageBottomMarginForLargeState: CGFloat = 12
-    static let ImageBottomMarginForSmallState: CGFloat = 6
-    static let ImageSizeForSmallState: CGFloat = 32
-    static let NavBarHeightSmallState: CGFloat = 44
-    static let NavBarHeightLargeState: CGFloat = 96.5
 }

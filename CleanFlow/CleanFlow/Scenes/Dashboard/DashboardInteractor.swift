@@ -13,6 +13,7 @@ protocol DashboardBusinessLogic {
 }
 protocol DashboardDataStore: class {
     var profile: Profile? { get set }
+    var userObjects: [String] { get set }
 }
 
 class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
@@ -21,6 +22,7 @@ class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
     var worker: DashboardWorker?
     
     var profile: Profile?
+    var userObjects: [String] = []
     
     func getProfile(request: Dashboard.GetProfile.Request) {
         // data passed from login
@@ -30,7 +32,9 @@ class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
         
         let userData = worker?.getUserData(name: userProfile.name)
         
-        let response = Dashboard.GetProfile.Response(profile: userProfile, userObjects: userData?.userObjects ?? [])
+        userObjects = userData?.userObjects ?? []
+        
+        let response = Dashboard.GetProfile.Response(profile: userProfile, userObjects: userObjects)
         presenter?.presentProfile(response: response)
     }
 
