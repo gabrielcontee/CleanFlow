@@ -40,7 +40,7 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.largeTitle(with: .white)
+        self.largeNavBar()
         let request = Dashboard.GetProfile.Request()
         interactor?.getProfile(request: request)
     }

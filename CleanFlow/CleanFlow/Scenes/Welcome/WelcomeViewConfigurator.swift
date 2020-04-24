@@ -29,16 +29,9 @@ class WelcomeViewConfigurator {
 
         let nav = UINavigationController(rootViewController: viewController)
         
-        visualSetup()
+        viewController.largeNavBar(title: "Login")
         
         window.rootViewController = nav
-    }
-    
-    private func visualSetup() {
-        viewController.title = "Login"
-        viewController.navigationController?.navigationBar.prefersLargeTitles = true
-        viewController.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        viewController.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
 }
 

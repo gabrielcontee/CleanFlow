@@ -28,9 +28,16 @@ extension UIViewController {
         view.endEditing(true)
     }
     
-    func largeTitle(with color: UIColor) {
+//    func largeTitle(with color: UIColor) {
+//        self.navigationController?.navigationBar.prefersLargeTitles = true
+//        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : color]
+//        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+//    }
+    
+    func largeNavBar(title: String = "") {
+        self.title = title
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : color]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
 }
