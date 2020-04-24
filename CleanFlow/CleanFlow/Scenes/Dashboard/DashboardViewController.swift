@@ -60,12 +60,46 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     }
     
     func displayProfileData(viewModel: Dashboard.GetProfile.ViewModel) {
-        self.title = viewModel.name
+        self.title = viewModel.title
         displayedObjects = viewModel.userObjects
+        
+        if let userImage = UIImage(named: viewModel.name) {
+            setupUI(userImage: userImage)
+        }
         
         objectsTableView.reloadData()
     }
     
+    private func setupUI(userImage: UIImage) {
+        
+        let imageView = UIImageView(image: userImage)
+        
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.addSubview(imageView)
+        imageView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        NSLayoutConstraint.activate([
+            imageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor,
+                                             constant: -Const.ImageRightMargin),
+            imageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor,
+                                              constant: -Const.ImageBottomMarginForLargeState),
+            imageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+            ])
+    }
+
+}
+
+private struct Const {
+    static let ImageSizeForLargeState: CGFloat = 40
+    static let ImageRightMargin: CGFloat = 16
+    static let ImageBottomMarginForLargeState: CGFloat = 12
+    static let ImageBottomMarginForSmallState: CGFloat = 6
+    static let ImageSizeForSmallState: CGFloat = 32
+    static let NavBarHeightSmallState: CGFloat = 44
+    static let NavBarHeightLargeState: CGFloat = 96.5
 }
 
 extension DashboardViewController: UITableViewDataSource {

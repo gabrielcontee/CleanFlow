@@ -15,6 +15,7 @@ protocol WelcomeBusinessLogic {
 
 protocol WelcomeDataStore {
     var name: String? { get set }
+    var password: String? { get set }
 }
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
@@ -23,6 +24,7 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     var presenter: WelcomePresenterLogic?
     
     var name: String?
+    var password: String?
     
     func login(request: Welcome.Login.Request) {
         guard let name = request.name, let password = request.password else {
@@ -42,6 +44,6 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     }
     
     func register(request: Welcome.Register.Request) {
-        
+        // TO DO
     }
 }

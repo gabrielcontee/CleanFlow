@@ -9,6 +9,10 @@ An example of a simple login application built using Clean Swift architecture wi
 ## Architecture
 
 Clean Swift with Xibs
+
+## Features
+
+Unit Tests: 42% coverage
   
 ## How to install
 

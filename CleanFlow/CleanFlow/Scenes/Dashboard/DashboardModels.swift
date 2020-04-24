@@ -20,6 +20,7 @@ enum Dashboard {
         }
         
         struct ViewModel {
+            var title: String
             var name: String
             var userObjects: [String]
         }

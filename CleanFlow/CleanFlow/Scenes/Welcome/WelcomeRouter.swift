@@ -23,7 +23,7 @@ class WelcomeRouter: WelcomeRoutingLogic, WelcomeDataPassing {
     var dataStore: WelcomeDataStore?
 
     func navigateToDashboard(source: WelcomeViewController, destination: DashboardViewController) {
-        source.show(destination, sender: nil)
+        source.show(destination, sender: nil) 
     }
 
     func passDataToDashboard(source: WelcomeDataStore, destination: inout DashboardDataStore) {

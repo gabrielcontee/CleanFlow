@@ -36,5 +36,7 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
         }
     }
     
-    func displayRegister(viewModel: Welcome.Register.ViewModel) {}
+    func displayRegister(viewModel: Welcome.Register.ViewModel) {
+        // TO DO
+    }
 }

@@ -14,11 +14,11 @@ protocol DashboardPresentLogic: class {
 
 class DashboardPresenter: DashboardPresentLogic {
     
-    weak var viewController: DashboardViewController?
+    weak var viewController: DashboardDisplayLogic?
     
     func presentProfile(response: Dashboard.GetProfile.Response) {
         
-        let viewModel = Dashboard.GetProfile.ViewModel(name: "Bem vindo \(response.profile.name)", userObjects: response.userObjects)
+        let viewModel = Dashboard.GetProfile.ViewModel(title:  "Bem vindo \(response.profile.name)", name: response.profile.name, userObjects: response.userObjects)
         viewController?.displayProfileData(viewModel: viewModel)
     }
 }

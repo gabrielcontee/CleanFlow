@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */; };
+		DE2FBCD7244A4A40003B9FC3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD6244A4A40003B9FC3 /* UIView.swift */; };
 		DE4CB1E72448D1D4009DE7B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */; };
 		DE4CB1E82448D1D4009DE7B5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */; };
 		DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */; };
@@ -22,7 +23,6 @@
 		DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994E8244781CE00CF02B8 /* SceneDelegate.swift */; };
 		DEB994F0244781D600CF02B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB994EF244781D600CF02B8 /* Assets.xcassets */; };
 		DEB994F3244781D600CF02B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB994F1244781D600CF02B8 /* LaunchScreen.storyboard */; };
-		DEB994FE244781D600CF02B8 /* CleanFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */; };
 		DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950C2447827700CF02B8 /* WelcomeModels.swift */; };
 		DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */; };
 		DEB99511244787C800CF02B8 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB99510244787C800CF02B8 /* WelcomePresenter.swift */; };
@@ -30,6 +30,11 @@
 		DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951524479EBD00CF02B8 /* MockDatabase.swift */; };
 		DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB995182447A33500CF02B8 /* UIViewController.swift */; };
 		DEB9951B2448978500CF02B8 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */; };
+		DEE2C908244DD791006C866F /* DashboardWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C907244DD791006C866F /* DashboardWorkerTests.swift */; };
+		DEE2C90A244DD902006C866F /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C909244DD902006C866F /* DashboardViewControllerTests.swift */; };
+		DEE2C90D244E03EE006C866F /* DashboardInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C90C244E03EE006C866F /* DashboardInteractorTests.swift */; };
+		DEE2C90F244E1521006C866F /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C90E244E1521006C866F /* DashboardPresenterTests.swift */; };
+		DEE2C912244E213B006C866F /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
+		DE2FBCD6244A4A40003B9FC3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewConfigurator.swift; sourceTree = "<group>"; };
@@ -61,7 +67,6 @@
 		DEB994F2244781D600CF02B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEB994F4244781D600CF02B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB994F9244781D600CF02B8 /* CleanFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanFlowTests.swift; sourceTree = "<group>"; };
 		DEB994FF244781D600CF02B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEB9950C2447827700CF02B8 /* WelcomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeModels.swift; sourceTree = "<group>"; };
 		DEB9950E2447844B00CF02B8 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
@@ -70,6 +75,11 @@
 		DEB9951524479EBD00CF02B8 /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
 		DEB995182447A33500CF02B8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		DEE2C907244DD791006C866F /* DashboardWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorkerTests.swift; sourceTree = "<group>"; };
+		DEE2C909244DD902006C866F /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
+		DEE2C90C244E03EE006C866F /* DashboardInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractorTests.swift; sourceTree = "<group>"; };
+		DEE2C90E244E1521006C866F /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
+		DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +157,7 @@
 		DEB994FC244781D600CF02B8 /* CleanFlowTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEB994FD244781D600CF02B8 /* CleanFlowTests.swift */,
+				DEE2C906244DD775006C866F /* Scenes */,
 				DEB994FF244781D600CF02B8 /* Info.plist */,
 			);
 			path = CleanFlowTests;
@@ -191,8 +201,37 @@
 			isa = PBXGroup;
 			children = (
 				DEB995182447A33500CF02B8 /* UIViewController.swift */,
+				DE2FBCD6244A4A40003B9FC3 /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DEE2C906244DD775006C866F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2C910244E1FAF006C866F /* Welcome */,
+				DEE2C90B244DEBE7006C866F /* Dashboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DEE2C90B244DEBE7006C866F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2C909244DD902006C866F /* DashboardViewControllerTests.swift */,
+				DEE2C907244DD791006C866F /* DashboardWorkerTests.swift */,
+				DEE2C90C244E03EE006C866F /* DashboardInteractorTests.swift */,
+				DEE2C90E244E1521006C866F /* DashboardPresenterTests.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		DEE2C910244E1FAF006C866F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +349,7 @@
 				DE4CB1EE2448E178009DE7B5 /* DashboardViewController.swift in Sources */,
 				DE4CB1F12448E316009DE7B5 /* DashboardInteractor.swift in Sources */,
 				DE4CB1FA244903FA009DE7B5 /* DashboardRouter.swift in Sources */,
+				DE2FBCD7244A4A40003B9FC3 /* UIView.swift in Sources */,
 				DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */,
 				DE4CB1F32448E3F0009DE7B5 /* DashboardModels.swift in Sources */,
 				DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */,
@@ -322,7 +362,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB994FE244781D600CF02B8 /* CleanFlowTests.swift in Sources */,
+				DEE2C908244DD791006C866F /* DashboardWorkerTests.swift in Sources */,
+				DEE2C90A244DD902006C866F /* DashboardViewControllerTests.swift in Sources */,
+				DEE2C912244E213B006C866F /* WelcomeViewControllerTests.swift in Sources */,
+				DEE2C90F244E1521006C866F /* DashboardPresenterTests.swift in Sources */,
+				DEE2C90D244E03EE006C866F /* DashboardInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
