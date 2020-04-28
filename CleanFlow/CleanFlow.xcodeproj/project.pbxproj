@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DE1515392453979C00CF3F2C /* NewObjectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1515382453979C00CF3F2C /* NewObjectInteractor.swift */; };
-		DE15153B24539CC600CF3F2C /* NewObjectRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE15153A24539CC600CF3F2C /* NewObjectRouter.swift */; };
 		DE15153D2453A62A00CF3F2C /* NewObjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE15153C2453A62A00CF3F2C /* NewObjectPresenter.swift */; };
 		DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */; };
 		DE2FBCD7244A4A40003B9FC3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD6244A4A40003B9FC3 /* UIView.swift */; };
@@ -22,6 +21,7 @@
 		DE4CB1F62448E45F009DE7B5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F52448E45F009DE7B5 /* Profile.swift */; };
 		DE4CB1F82448F9BB009DE7B5 /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */; };
 		DE4CB1FA244903FA009DE7B5 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */; };
+		DE844F142458634F00567B02 /* NewObjectRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE844F132458634F00567B02 /* NewObjectRouter.swift */; };
 		DE9E2A7024532C5C006F7FF1 /* NewObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E2A6E24532C5C006F7FF1 /* NewObjectViewController.swift */; };
 		DE9E2A7124532C5C006F7FF1 /* NewObjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9E2A6F24532C5C006F7FF1 /* NewObjectViewController.xib */; };
 		DE9E2A732453325C006F7FF1 /* NewObjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E2A722453325C006F7FF1 /* NewObjectModels.swift */; };
@@ -36,11 +36,14 @@
 		DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951524479EBD00CF02B8 /* MockDatabase.swift */; };
 		DEB995192447A33500CF02B8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB995182447A33500CF02B8 /* UIViewController.swift */; };
 		DEB9951B2448978500CF02B8 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */; };
+		DEC6CD182457768000FD072D /* NewObjectWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6CD172457768000FD072D /* NewObjectWorker.swift */; };
+		DEC6CD1B245778E800FD072D /* UserObjectsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC6CD1A245778E800FD072D /* UserObjectsWorker.swift */; };
 		DEE2C908244DD791006C866F /* DashboardWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C907244DD791006C866F /* DashboardWorkerTests.swift */; };
 		DEE2C90A244DD902006C866F /* DashboardViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C909244DD902006C866F /* DashboardViewControllerTests.swift */; };
 		DEE2C90D244E03EE006C866F /* DashboardInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C90C244E03EE006C866F /* DashboardInteractorTests.swift */; };
 		DEE2C90F244E1521006C866F /* DashboardPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C90E244E1521006C866F /* DashboardPresenterTests.swift */; };
 		DEE2C912244E213B006C866F /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */; };
+		DEEE38DE2458DC7600EB1381 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE38DD2458DC7600EB1381 /* DefaultsKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +58,6 @@
 
 /* Begin PBXFileReference section */
 		DE1515382453979C00CF3F2C /* NewObjectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectInteractor.swift; sourceTree = "<group>"; };
-		DE15153A24539CC600CF3F2C /* NewObjectRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectRouter.swift; sourceTree = "<group>"; };
 		DE15153C2453A62A00CF3F2C /* NewObjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectPresenter.swift; sourceTree = "<group>"; };
 		DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
 		DE2FBCD6244A4A40003B9FC3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		DE4CB1F52448E45F009DE7B5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DE4CB1F72448F9BB009DE7B5 /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
 		DE4CB1F9244903FA009DE7B5 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		DE844F132458634F00567B02 /* NewObjectRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectRouter.swift; sourceTree = "<group>"; };
 		DE9E2A6E24532C5C006F7FF1 /* NewObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectViewController.swift; sourceTree = "<group>"; };
 		DE9E2A6F24532C5C006F7FF1 /* NewObjectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewObjectViewController.xib; sourceTree = "<group>"; };
 		DE9E2A722453325C006F7FF1 /* NewObjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectModels.swift; sourceTree = "<group>"; };
@@ -87,11 +90,14 @@
 		DEB9951524479EBD00CF02B8 /* MockDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabase.swift; sourceTree = "<group>"; };
 		DEB995182447A33500CF02B8 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		DEB9951A2448978500CF02B8 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		DEC6CD172457768000FD072D /* NewObjectWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectWorker.swift; sourceTree = "<group>"; };
+		DEC6CD1A245778E800FD072D /* UserObjectsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObjectsWorker.swift; sourceTree = "<group>"; };
 		DEE2C907244DD791006C866F /* DashboardWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorkerTests.swift; sourceTree = "<group>"; };
 		DEE2C909244DD902006C866F /* DashboardViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerTests.swift; sourceTree = "<group>"; };
 		DEE2C90C244E03EE006C866F /* DashboardInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractorTests.swift; sourceTree = "<group>"; };
 		DEE2C90E244E1521006C866F /* DashboardPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenterTests.swift; sourceTree = "<group>"; };
 		DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		DEEE38DD2458DC7600EB1381 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +147,9 @@
 				DE9E2A6F24532C5C006F7FF1 /* NewObjectViewController.xib */,
 				DE9E2A722453325C006F7FF1 /* NewObjectModels.swift */,
 				DE1515382453979C00CF3F2C /* NewObjectInteractor.swift */,
-				DE15153A24539CC600CF3F2C /* NewObjectRouter.swift */,
 				DE15153C2453A62A00CF3F2C /* NewObjectPresenter.swift */,
+				DEC6CD172457768000FD072D /* NewObjectWorker.swift */,
+				DE844F132458634F00567B02 /* NewObjectRouter.swift */,
 			);
 			path = NewObject;
 			sourceTree = "<group>";
@@ -216,9 +223,10 @@
 		DEB9951424479EAC00CF02B8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE38DC2458DC6100EB1381 /* Keys */,
+				DEC6CD19245778A200FD072D /* DatabaseManager */,
 				DE4CB1F42448E454009DE7B5 /* Models */,
 				DEB995172447A2BB00CF02B8 /* Extensions */,
-				DEB9951524479EBD00CF02B8 /* MockDatabase.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -230,6 +238,15 @@
 				DE2FBCD6244A4A40003B9FC3 /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DEC6CD19245778A200FD072D /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				DEB9951524479EBD00CF02B8 /* MockDatabase.swift */,
+				DEC6CD1A245778E800FD072D /* UserObjectsWorker.swift */,
+			);
+			path = DatabaseManager;
 			sourceTree = "<group>";
 		};
 		DEE2C906244DD775006C866F /* Scenes */ = {
@@ -258,6 +275,14 @@
 				DEE2C911244E213B006C866F /* WelcomeViewControllerTests.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		DEEE38DC2458DC6100EB1381 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE38DD2458DC7600EB1381 /* DefaultsKeys.swift */,
+			);
+			path = Keys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,17 +398,20 @@
 				DEB9951324478ABE00CF02B8 /* WelcomeWorker.swift in Sources */,
 				DEB994E7244781CE00CF02B8 /* AppDelegate.swift in Sources */,
 				DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */,
+				DEC6CD182457768000FD072D /* NewObjectWorker.swift in Sources */,
+				DEC6CD1B245778E800FD072D /* UserObjectsWorker.swift in Sources */,
 				DEB9951624479EBD00CF02B8 /* MockDatabase.swift in Sources */,
-				DE15153B24539CC600CF3F2C /* NewObjectRouter.swift in Sources */,
 				DE4CB1EE2448E178009DE7B5 /* DashboardViewController.swift in Sources */,
 				DE1515392453979C00CF3F2C /* NewObjectInteractor.swift in Sources */,
 				DE4CB1F12448E316009DE7B5 /* DashboardInteractor.swift in Sources */,
 				DE4CB1FA244903FA009DE7B5 /* DashboardRouter.swift in Sources */,
 				DE9E2A732453325C006F7FF1 /* NewObjectModels.swift in Sources */,
 				DE2FBCD7244A4A40003B9FC3 /* UIView.swift in Sources */,
+				DEEE38DE2458DC7600EB1381 /* DefaultsKeys.swift in Sources */,
 				DEB9950D2447827700CF02B8 /* WelcomeModels.swift in Sources */,
 				DE4CB1F32448E3F0009DE7B5 /* DashboardModels.swift in Sources */,
 				DE15153D2453A62A00CF3F2C /* NewObjectPresenter.swift in Sources */,
+				DE844F142458634F00567B02 /* NewObjectRouter.swift in Sources */,
 				DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */,
 				DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */,
 				DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */,

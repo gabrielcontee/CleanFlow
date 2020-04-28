@@ -22,7 +22,6 @@ class WelcomeViewConfigurator {
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
-        interactor.worker = WelcomeWorker()
         presenter.viewController = viewController
         router.welcomeVC = viewController
         router.dataStore = interactor

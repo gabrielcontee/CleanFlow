@@ -17,7 +17,7 @@ class NewObjectViewController: UIViewController, NewObjectDisplayLogic {
     @IBOutlet weak var newObjectTextField: UITextField!
 
     var interactor: NewObjectBusinessLogic?
-    var router: NewObjectDataPassing?
+    var router: (NewObjectDataPassing & NewObjectRoutingProtocol)?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -32,14 +32,13 @@ class NewObjectViewController: UIViewController, NewObjectDisplayLogic {
     private func setup() {
         let viewController = self
         let interactor = NewObjectInteractor()
-//        let presenter = DashboardPresenter()
+        let presenter = NewObjectPresenter()
         let router = NewObjectRouter()
         viewController.interactor = interactor
         viewController.router = router
-//        interactor.worker = DashboardWorker()
-//        interactor.presenter = presenter
-//        presenter.viewController = viewController
-//        router.dashboardVC = viewController
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.newObjectVC = viewController
         router.dataStore = interactor
     }
     
@@ -49,7 +48,11 @@ class NewObjectViewController: UIViewController, NewObjectDisplayLogic {
     }
     
     func displayListWithNewObject(viewModel: NewObject.Add.ViewModel) {
-        
+        if viewModel.objectsUpdated == [] {
+            self.showAlert(title: "Failed to add object", message: "Please contact the suport for more information")
+        } else {
+            router?.routeToObjectsList()
+        }
     }
     
 }

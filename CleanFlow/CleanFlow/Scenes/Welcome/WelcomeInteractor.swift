@@ -20,8 +20,8 @@ protocol WelcomeDataStore {
 
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     
-    var worker: WelcomeWorker?
     var presenter: WelcomePresenterLogic?
+    var worker = WelcomeWorker(userAccess: MockDatabase())
     
     var name: String?
     var password: String?
@@ -33,12 +33,7 @@ class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
             return
         }
         
-        guard let response = worker?.authenticateLogin(name: name, password: password) else {
-            let response = Welcome.Login.Response(success: false, message: "Internal error")
-            presenter?.presentLogin(name: "", response: response)
-            return
-        }
-        
+        let response = worker.authenticateLogin(name: name, password: password)
         self.name = name
         presenter?.presentLogin(name: name, response: response)
     }

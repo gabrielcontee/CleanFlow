@@ -52,7 +52,6 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
         let router = DashboardRouter()
         viewController.interactor = interactor
         viewController.router = router
-        interactor.worker = DashboardWorker()
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.dashboardVC = viewController

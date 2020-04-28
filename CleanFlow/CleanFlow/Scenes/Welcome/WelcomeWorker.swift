@@ -10,10 +10,15 @@ import Foundation
 
 class WelcomeWorker: NSObject {
     
-    private let nameDefaultsKey = "name"
+    var userAccess: UserAccessProtocol
+    
+    init(userAccess: UserAccessProtocol) {
+        self.userAccess = userAccess
+    }
     
     func authenticateLogin(name: String, password: String) -> Welcome.Login.Response {
-        if MockDatabase.instance.users[name] == password {
+        
+        if userAccess.authenticated(username: name, password: password) {
             return Welcome.Login.Response(success: true, message: nil)
         } else {
             return Welcome.Login.Response(success: false, message: "Wrong name or password")
@@ -21,17 +26,15 @@ class WelcomeWorker: NSObject {
     }
     
     // TO DO
-//    func registerUser(name: String, password: String) -> Welcome.Register.Response {
-//
-//    }
+    //    func registerUser(name: String, password: String) -> Welcome.Register.Response {
+    //
+    //    }
     
-    func saveUser(_ name: String)
-    {
-      UserDefaults.standard.set(name, forKey: nameDefaultsKey)
+    func saveUser(_ name: String) {
+        UserDefaults.standard.set(name, forKey: nameDefaultsKey)
     }
     
-    func getName() -> String?
-    {
-      return UserDefaults.standard.string(forKey: nameDefaultsKey)
+    func getName() -> String? {
+        return UserDefaults.standard.string(forKey: nameDefaultsKey)
     }
 }

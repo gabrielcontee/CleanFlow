@@ -17,8 +17,7 @@ class NewObjectPresenter: NewObjectPresentLogic {
     weak var viewController: NewObjectDisplayLogic?
     
     func presentNewObject(response:  NewObject.Add.Response) {
-        
-        let viewModel = NewObject.Add.ViewModel(success: response.success)
+        let viewModel = NewObject.Add.ViewModel(success: response.success, objectsUpdated: response.objectsUpdated)
         viewController?.displayListWithNewObject(viewModel: viewModel)
     }
 }

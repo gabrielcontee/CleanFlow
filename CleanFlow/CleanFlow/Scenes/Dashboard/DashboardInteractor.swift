@@ -19,7 +19,7 @@ protocol DashboardDataStore: class {
 class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
 
     var presenter: DashboardPresentLogic?
-    var worker: DashboardWorker?
+    var worker = DashboardWorker(objectsStore: MockDatabase())
     
     var profile: Profile?
     var userObjects: [String] = []
@@ -30,10 +30,8 @@ class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
             return
         }
         
-        let userData = worker?.getUserData(name: userProfile.name)
-        
-        userObjects = userData?.userObjects ?? []
-        
+        let userData = worker.getUserData(name: userProfile.name)
+        userObjects = userData.userObjects
         let response = Dashboard.GetProfile.Response(profile: userProfile, userObjects: userObjects)
         presenter?.presentProfile(response: response)
     }

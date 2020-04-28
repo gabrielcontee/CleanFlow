@@ -17,10 +17,12 @@ enum NewObject {
         
         struct Response {
             var success: Bool
+            var objectsUpdated: [String]
         }
         
         struct ViewModel {
             var success: Bool
+            var objectsUpdated: [String]
         }
     }
 }

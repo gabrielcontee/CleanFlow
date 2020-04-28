@@ -10,11 +10,16 @@ import UIKit
 
 class DashboardWorker: NSObject {
     
+    var objectsStore: ObjectsStoreProtocol
+    
+    init(objectsStore: ObjectsStoreProtocol) {
+        self.objectsStore = objectsStore
+    }
+    
     func getUserData(name: String) -> Dashboard.GetProfile.Response {
         let image = UIImage(named: name)
         let profile = Profile(name: name, image: image)
-        let itens = MockDatabase.instance.usersItens[name]
-        return Dashboard.GetProfile.Response(profile: profile, userObjects: itens ?? [])
+        let itens = objectsStore.fetchUserObjects(username: name)
+        return Dashboard.GetProfile.Response(profile: profile, userObjects: itens)
     }
-    
 }
