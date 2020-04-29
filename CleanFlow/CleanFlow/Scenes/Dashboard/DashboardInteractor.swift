@@ -10,6 +10,7 @@ import UIKit
 
 protocol DashboardBusinessLogic {
     func getProfile(request: Dashboard.GetProfile.Request)
+    func refreshObjects(request: Dashboard.GetNewObjects.Request)
 }
 protocol DashboardDataStore: class {
     var profile: Profile? { get set }
@@ -19,23 +20,22 @@ protocol DashboardDataStore: class {
 class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
 
     var presenter: DashboardPresentLogic?
-    var worker: DashboardWorker?
+    var worker = DashboardWorker(objectsStore: MockDatabase.instance)
     
     var profile: Profile?
     var userObjects: [String] = []
-    
+
     func getProfile(request: Dashboard.GetProfile.Request) {
-        // data passed from login
-        guard let userProfile = profile else {
-            return
-        }
         
-        let userData = worker?.getUserData(name: userProfile.name)
-        
-        userObjects = userData?.userObjects ?? []
-        
-        let response = Dashboard.GetProfile.Response(profile: userProfile, userObjects: userObjects)
+        let userData = worker.getUserData()
+        let response = Dashboard.GetProfile.Response(profile: userData.profile, userObjects: userData.userObjects)
         presenter?.presentProfile(response: response)
     }
-
+    
+    func refreshObjects(request: Dashboard.GetNewObjects.Request) {
+        
+        let objects = worker.getUserObjects()
+        let response = Dashboard.GetNewObjects.Response(userObjects: objects)
+        presenter?.presentRefreshedObjects(response: response)
+    }
 }

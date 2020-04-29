@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewObjectViewController" customModule="CleanFlow" customModuleProvider="target">
+            <connections>
+                <outlet property="newObjectTextField" destination="yzI-cQ-d0i" id="i15-oo-Us1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yzI-cQ-d0i">
+                    <rect key="frame" x="52" y="431" width="310.5" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZF-QE-9SH">
+                    <rect key="frame" x="83" y="788" width="248" height="42"/>
+                    <color key="backgroundColor" red="0.83828800920000002" green="0.72679811719999998" blue="0.58820956950000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="mI5-co-UPH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveObjectPressed:" destination="-1" eventType="touchUpInside" id="hBy-NO-82D"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.1615738571" green="0.1989199519" blue="0.28236377239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="dZF-QE-9SH" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="BfL-LH-J9z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dZF-QE-9SH" secondAttribute="bottom" constant="32" id="TqC-BE-VTP"/>
+                <constraint firstItem="yzI-cQ-d0i" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tvf-Te-KSD"/>
+                <constraint firstItem="dZF-QE-9SH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wo3-IY-mWd"/>
+                <constraint firstItem="yzI-cQ-d0i" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eZd-Lb-gw5"/>
+                <constraint firstItem="yzI-cQ-d0i" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.75" id="mwa-Gs-20i"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </view>
+    </objects>
+</document>

@@ -15,7 +15,6 @@ protocol WelcomePresenterLogic: class {
 
 class WelcomePresenter: WelcomePresenterLogic {
     
-    // weak var because viewController might not be in the screen anymore (router and presenter aren't necessarily synched
     weak var viewController: WelcomeDisplayLogic?
     
     func presentLogin(name: String, response: Welcome.Login.Response) {

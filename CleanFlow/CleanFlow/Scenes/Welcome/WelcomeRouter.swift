@@ -21,11 +21,11 @@ class WelcomeRouter: WelcomeRoutingLogic, WelcomeDataPassing {
     weak var welcomeVC: WelcomeViewController?
     
     var dataStore: WelcomeDataStore?
-
+    
     func navigateToDashboard(source: WelcomeViewController, destination: DashboardViewController) {
         source.show(destination, sender: nil) 
     }
-
+    
     func passDataToDashboard(source: WelcomeDataStore, destination: inout DashboardDataStore) {
         guard let store = dataStore, let name = store.name else {
             print("Error passing name property")
@@ -37,8 +37,9 @@ class WelcomeRouter: WelcomeRoutingLogic, WelcomeDataPassing {
     func routeToDashboard(viewModel: Welcome.Login.ViewModel) {
         dataStore?.name = viewModel.name
         let dashboardVC = DashboardViewController()
-        guard let destinationRouter = dashboardVC.router, var destinationDS = destinationRouter.dataStore, let sourceDataStore = dataStore else {
-            return }
+        guard let router = dashboardVC.router, var destinationDS = router.dashboardDataStore, let sourceDataStore = dataStore else {
+            return
+        }
         passDataToDashboard(source: sourceDataStore, destination: &destinationDS)
         guard let currentVC = welcomeVC else { return }
         navigateToDashboard(source: currentVC, destination: dashboardVC)

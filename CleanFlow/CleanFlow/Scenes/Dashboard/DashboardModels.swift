@@ -26,4 +26,17 @@ enum Dashboard {
         }
     }
     
+    enum GetNewObjects {
+        
+        struct Request {}
+        
+        struct Response {
+            var userObjects: [String]
+        }
+        
+        struct ViewModel {
+            var userObjects: [String]
+        }
+    }
+    
 }

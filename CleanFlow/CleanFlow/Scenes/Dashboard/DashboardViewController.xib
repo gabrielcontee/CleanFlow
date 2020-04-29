@@ -19,20 +19,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RHA-aA-pUT">
-                    <rect key="frame" x="0.0" y="52" width="414" height="844"/>
+                    <rect key="frame" x="0.0" y="112" width="414" height="784"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="4nm-3Z-GD9"/>
                         <outlet property="delegate" destination="-1" id="J6Y-9N-Ff0"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0S-yJ-zl8">
+                    <rect key="frame" x="352" y="60" width="46" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="xib-OM-fbf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                    <state key="normal" title="+">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addNewObjectPressed:" destination="-1" eventType="touchUpInside" id="IAm-Ah-l8R"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.1615738571" green="0.1989199519" blue="0.28236377239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="n0S-yJ-zl8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="2Pl-Qi-wFY"/>
+                <constraint firstItem="RHA-aA-pUT" firstAttribute="top" secondItem="n0S-yJ-zl8" secondAttribute="bottom" constant="8" id="9Ag-qI-mNg"/>
                 <constraint firstAttribute="bottom" secondItem="RHA-aA-pUT" secondAttribute="bottom" id="BrG-bD-FVA"/>
                 <constraint firstItem="RHA-aA-pUT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ERr-MO-xE6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="n0S-yJ-zl8" secondAttribute="trailing" constant="16" id="Z9p-MR-rkL"/>
                 <constraint firstItem="RHA-aA-pUT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mt9-Fs-l5l"/>
-                <constraint firstItem="RHA-aA-pUT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="ywt-sX-4VK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
