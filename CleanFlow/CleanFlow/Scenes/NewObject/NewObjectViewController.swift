@@ -39,7 +39,7 @@ class NewObjectViewController: UIViewController, NewObjectDisplayLogic {
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.newObjectVC = viewController
-        router.dataStore = interactor
+        router.newObjectDataStore = interactor
     }
     
     @IBAction func saveObjectPressed(_ sender: Any) {

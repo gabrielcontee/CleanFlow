@@ -10,6 +10,7 @@ import UIKit
 
 protocol DashboardDisplayLogic: class {
     func displayProfileData(viewModel: Dashboard.GetProfile.ViewModel)
+    func displayFreshObjects(viewModel: Dashboard.GetNewObjects.ViewModel)
 }
 
 class DashboardViewController: UIViewController, DashboardDisplayLogic  {
@@ -23,7 +24,7 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     }
     
     var interactor: DashboardBusinessLogic?
-    var router: DashboardDataPassing?
+    var router: (DashboardDataPassing & DashboardRoutingLogic)?
     
     var displayedObjects: [String] = []
     
@@ -55,7 +56,11 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.dashboardVC = viewController
-        router.dataStore = interactor
+        router.dashboardDataStore = interactor
+    }
+    
+    @IBAction func addNewObjectPressed(_ sender: Any) {
+        router?.routeToNewObject(userObjects: displayedObjects)
     }
     
     func displayProfileData(viewModel: Dashboard.GetProfile.ViewModel) {
@@ -67,6 +72,16 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
         }
         
         objectsTableView.reloadData()
+    }
+    
+    func requestObjectsRefresh(){
+        interactor?.refreshObjects(request: Dashboard.GetNewObjects.Request())
+    }
+    
+    func displayFreshObjects(viewModel: Dashboard.GetNewObjects.ViewModel) {
+        
+        displayedObjects = viewModel.userObjects
+        self.objectsTableView.reloadData()
     }
     
     private func setupUI(userImage: UIImage) {

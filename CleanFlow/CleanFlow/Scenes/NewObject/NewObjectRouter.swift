@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NewObjectDataPassing {
-    var dataStore: NewObjectDataStore? { get }
+    var newObjectDataStore: NewObjectDataStore? { get }
 }
 
 protocol NewObjectRoutingProtocol {
@@ -19,35 +19,23 @@ protocol NewObjectRoutingProtocol {
 class NewObjectRouter: NewObjectDataPassing, NewObjectRoutingProtocol {
     
     weak var newObjectVC: NewObjectViewController?
-    var dataStore: NewObjectDataStore?
+    var newObjectDataStore: NewObjectDataStore?
     
     func routeToObjectsList() {
         
+        guard let destinationVC = newObjectVC?.navigationController?.getVCinStack(ofClass: DashboardViewController.self) as? DashboardViewController, let newObjDataStore = newObjectDataStore, let router = destinationVC.router, var destinationDataStore = router.dashboardDataStore, let newObjcVC = newObjectVC else {
+            return
+        }
+        passDataToDashboard(source: newObjDataStore, destination: &destinationDataStore)
+        navigateToObjectsList(source: newObjcVC, destination: destinationVC)
+        destinationVC.requestObjectsRefresh()
+    }
+    
+    func navigateToObjectsList(source: NewObjectViewController, destination: DashboardViewController) {
+        source.navigationController?.popToViewController(destination, animated: true)
+    }
+    
+    func passDataToDashboard(source: NewObjectDataStore, destination: inout DashboardDataStore) {
+        destination.userObjects = source.currentObjects
     }
 }
-
-
-// func routeToListOrders(segue: UIStoryboardSegue?)
-// {
-//   if let segue = segue {
-//     let destinationVC = segue.destination as! ListOrdersViewController
-//     var destinationDS = destinationVC.router!.dataStore!
-//     passDataToListOrders(source: dataStore!, destination: &destinationDS)
-//   } else {
-//     let index = viewController!.navigationController!.viewControllers.count - 2
-//     let destinationVC = viewController?.navigationController?.viewControllers[index] as! ListOrdersViewController
-//     var destinationDS = destinationVC.router!.dataStore!
-//     passDataToListOrders(source: dataStore!, destination: &destinationDS)
-//     navigateToListOrders(source: viewController!, destination: destinationVC)
-//   }
-// }
-//
-//func navigateToListOrders(source: CreateOrderViewController, destination: ListOrdersViewController)
-//{
-//  source.navigationController?.popViewController(animated: true)
-//}
-//
-//func passDataToListOrders(source: CreateOrderDataStore, destination: inout ListOrdersDataStore)
-//{
-//}
-

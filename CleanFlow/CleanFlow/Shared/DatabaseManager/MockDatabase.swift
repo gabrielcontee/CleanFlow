@@ -11,10 +11,18 @@ import Foundation
 typealias Success = Bool
 
 class MockDatabase: NSObject, ObjectsStoreProtocol, UserAccessProtocol {
-    
+
     let defaults = UserDefaults.standard // symbolic storage
     
-    let username = UserDefaults.standard.string(forKey: nameDefaultsKey)
+    var username: String = ""
+    
+    static var instance = MockDatabase()
+    
+    override private init() {
+        if let name = defaults.string(forKey: nameDefaultsKey) {
+            username = name
+        }
+    }
     
     private(set) var users: [String: String] = [
         "gabriel": "12345",
@@ -40,31 +48,40 @@ class MockDatabase: NSObject, ObjectsStoreProtocol, UserAccessProtocol {
 //    ]
     
     func authenticated(username: String, password: String) -> Bool {
-        return users[username] == password ? true : false
+        if users[username] == password {
+            self.username = username
+            return true
+        } else {
+            return false
+        }
     }
     
-    func addUserObject(object: String) -> [String] {
-        guard let name = username else {
-            return []
-        }
+    func getUsername() -> String {
+        return username
+    }
+    
+    func addUserObject(object: String) -> ObjectsList {
         
-        if var items = userItens[name] {
+        if var items = userItens[username] {
             items.append(object)
-            userItens[name] = items
-            // salvar userItens 
+            userItens[username] = items
+            // salvar userItens
+            
+            
             return items
         } else {
-            userItens[name] = [object]
+            userItens[username] = [object]
             // salvar userItens
             return [object]
         }
     }
     
-    func removeUserObject(object: String, from user: String) -> Success {
-        guard let itens = userItens[user] else {
+    func removeUserObject(object: String) -> Success {
+        
+        guard let itens = userItens[username] else {
             return false
         }
-        userItens[user] = itens.filter() { $0 == object }
+        userItens[username] = itens.filter() { $0 == object }
         return true
     }
     

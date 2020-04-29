@@ -8,3 +8,4 @@
 
 let nameDefaultsKey = "name"
 let userItensKey = "userItens"
+let logginStatusKey = "logged"

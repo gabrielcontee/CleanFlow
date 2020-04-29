@@ -14,17 +14,21 @@ protocol NewObjectBusinessLogic {
 
 protocol NewObjectDataStore {
     var newObjectName: String? { get set }
+    var currentObjects: [String] { get set }
 }
 
 class NewObjectInteractor: NewObjectBusinessLogic, NewObjectDataStore {
     
     var newObjectName: String?
+    var currentObjects: [String] = []
     
     var presenter: NewObjectPresentLogic?
-    var userObjectsWorker = UserObjectsWorker(objectsStore: MockDatabase())
+    var userObjectsWorker = UserObjectsWorker(objectsStore: MockDatabase.instance)
     
     func add(request: NewObject.Add.Request) {
+        
         let objectsReturned = userObjectsWorker.saveUserObject(object: request.objectName)
+        print(objectsReturned)
         let response = NewObject.Add.Response(success: true, objectsUpdated: objectsReturned)
         presenter?.presentNewObject(response: response)
     }

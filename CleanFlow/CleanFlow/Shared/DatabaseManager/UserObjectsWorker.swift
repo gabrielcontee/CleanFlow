@@ -8,14 +8,17 @@
 
 import Foundation
 
+typealias ObjectsList = [String]
+
 protocol ObjectsStoreProtocol {
-    func addUserObject(object: String) -> [String]
-    func removeUserObject(object: String, from user: String) -> Success
+    func addUserObject(object: String) -> ObjectsList
+    func removeUserObject(object: String) -> Success
     func fetchUserObjects(username: String) -> [String]
 }
 
 protocol UserAccessProtocol {
     func authenticated(username: String, password: String) -> Bool
+    func getUsername() -> String
 }
 
 class UserObjectsWorker: NSObject {
@@ -31,7 +34,7 @@ class UserObjectsWorker: NSObject {
         return objects
     }
     
-    func saveUserObject(object: String) -> [String] {
+    func saveUserObject(object: String) -> ObjectsList {
         return objectsStore.addUserObject(object: object)
     }
 }

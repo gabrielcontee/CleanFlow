@@ -21,7 +21,7 @@ protocol WelcomeDataStore {
 class WelcomeInteractor: WelcomeBusinessLogic, WelcomeDataStore {
     
     var presenter: WelcomePresenterLogic?
-    var worker = WelcomeWorker(userAccess: MockDatabase())
+    var worker = WelcomeWorker(userAccess: MockDatabase.instance)
     
     var name: String?
     var password: String?

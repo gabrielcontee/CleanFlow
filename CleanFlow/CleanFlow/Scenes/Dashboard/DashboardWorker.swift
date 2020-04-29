@@ -10,16 +10,26 @@ import UIKit
 
 class DashboardWorker: NSObject {
     
-    var objectsStore: ObjectsStoreProtocol
+    var userAndobjectsStore: (ObjectsStoreProtocol & UserAccessProtocol)
     
-    init(objectsStore: ObjectsStoreProtocol) {
-        self.objectsStore = objectsStore
+    init(objectsStore: (ObjectsStoreProtocol & UserAccessProtocol)) {
+        self.userAndobjectsStore = objectsStore
     }
     
-    func getUserData(name: String) -> Dashboard.GetProfile.Response {
-        let image = UIImage(named: name)
-        let profile = Profile(name: name, image: image)
-        let itens = objectsStore.fetchUserObjects(username: name)
+    func getUserData() -> Dashboard.GetProfile.Response {
+        
+        let username = userAndobjectsStore.getUsername()
+        
+        let image = UIImage(named: username)
+        let profile = Profile(name: username, image: image)
+        let itens = userAndobjectsStore.fetchUserObjects(username: username)
         return Dashboard.GetProfile.Response(profile: profile, userObjects: itens)
+    }
+    
+    func getUserObjects() -> [String] {
+        
+        let username = userAndobjectsStore.getUsername()
+        let itens = userAndobjectsStore.fetchUserObjects(username: username)
+        return itens
     }
 }

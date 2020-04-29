@@ -19,6 +19,7 @@ class WelcomeWorker: NSObject {
     func authenticateLogin(name: String, password: String) -> Welcome.Login.Response {
         
         if userAccess.authenticated(username: name, password: password) {
+            saveUser(name)
             return Welcome.Login.Response(success: true, message: nil)
         } else {
             return Welcome.Login.Response(success: false, message: "Wrong name or password")
@@ -32,6 +33,7 @@ class WelcomeWorker: NSObject {
     
     func saveUser(_ name: String) {
         UserDefaults.standard.set(name, forKey: nameDefaultsKey)
+        UserDefaults.standard.set(true, forKey: logginStatusKey) // no logout yet :)
     }
     
     func getName() -> String? {
