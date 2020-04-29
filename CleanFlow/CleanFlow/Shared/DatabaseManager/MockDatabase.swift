@@ -18,12 +18,6 @@ class MockDatabase: NSObject, ObjectsStoreProtocol, UserAccessProtocol {
     
     static var instance = MockDatabase()
     
-    override private init() {
-        if let name = defaults.string(forKey: nameDefaultsKey) {
-            username = name
-        }
-    }
-    
     private(set) var users: [String: String] = [
         "gabriel": "12345",
         "paolo": "guerrero",
@@ -32,20 +26,20 @@ class MockDatabase: NSObject, ObjectsStoreProtocol, UserAccessProtocol {
         "admin": "admin"
     ]
     
-    private var userItens: [String: [String]] = [:]
-//        "gabriel": [
-//            "Car",
-//            "Notebook",
-//            "PS4",
-//            "Bike"
-//        ],
-//        "paolo": [
-//            "Ball",
-//            "Hat",
-//            "Knife"
-//        ],
-//        "joe": []
-//    ]
+    private var userItens: [String] = [] {
+        didSet{
+            defaults.set(userItens, forKey: username)
+        }
+    }
+    
+    override private init() {
+        if let name = defaults.string(forKey: nameDefaultsKey) {
+            username = name
+        }
+        if let usersObjects = defaults.array(forKey: username) as? [String] {
+            userItens = usersObjects
+        }
+    }
     
     func authenticated(username: String, password: String) -> Bool {
         if users[username] == password {
@@ -61,35 +55,19 @@ class MockDatabase: NSObject, ObjectsStoreProtocol, UserAccessProtocol {
     }
     
     func addUserObject(object: String) -> ObjectsList {
+        userItens.append(object)
         
-        if var items = userItens[username] {
-            items.append(object)
-            userItens[username] = items
-            // salvar userItens
-            
-            
-            return items
-        } else {
-            userItens[username] = [object]
-            // salvar userItens
-            return [object]
-        }
+        return userItens
     }
     
     func removeUserObject(object: String) -> Success {
         
-        guard let itens = userItens[username] else {
-            return false
-        }
-        userItens[username] = itens.filter() { $0 == object }
+        userItens = userItens.filter() { $0 == object }
         return true
     }
     
     func fetchUserObjects(username: String) -> [String] {
-        guard let itens = userItens[username] else {
-            return []
-        }
-        return itens
+        return userItens
     }
     
     
