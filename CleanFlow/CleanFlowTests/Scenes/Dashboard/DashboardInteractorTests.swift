@@ -38,6 +38,7 @@ class DashboardInteractorTests: XCTestCase {
     // MARK: Method call expectations
     
     var presentProfileCalled = false
+    var presentRefreshedObjectsCalled = false
     
     // MARK: Spied methods
     
@@ -45,6 +46,12 @@ class DashboardInteractorTests: XCTestCase {
         
         presentProfileCalled = true
     }
+    
+    func presentRefreshedObjects(response: Dashboard.GetNewObjects.Response) {
+        
+        presentRefreshedObjectsCalled = true
+    }
+    
     
   }
   

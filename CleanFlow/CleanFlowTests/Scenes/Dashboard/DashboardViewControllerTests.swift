@@ -43,16 +43,22 @@ class DashboardViewControllerTests: XCTestCase {
     // MARK: - Test doubles
     
     class DashboardBusinessLogicSpy: DashboardBusinessLogic {
-        
+
         // MARK: Method call expectations
         
         var getProfileCalled = false
+        var refreshObjectsCalled = false
         
         // MARK: Spied methods
         
         func getProfile(request: Dashboard.GetProfile.Request) {
             getProfileCalled = true
         }
+        
+        func refreshObjects(request: Dashboard.GetNewObjects.Request) {
+            refreshObjectsCalled = true
+        }
+        
     }
     
     class TableViewSpy: UITableView {

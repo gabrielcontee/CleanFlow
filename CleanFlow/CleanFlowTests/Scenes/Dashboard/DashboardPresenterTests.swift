@@ -38,17 +38,25 @@ class DashboardPresenterTests: XCTestCase {
         // MARK: Method call expectations
         
         var displayProfileCalled = false
+        var displayFreshObjectsCalled = false
         
         // MARK: Argument expectations
         
-        var viewModel: Dashboard.GetProfile.ViewModel!
+        var getProfileViewModel: Dashboard.GetProfile.ViewModel!
+        var objectsViewModel: Dashboard.GetNewObjects.ViewModel!
         
         // MARK: Spied methods
         
         func displayProfileData(viewModel: Dashboard.GetProfile.ViewModel) {
             displayProfileCalled = true
-            self.viewModel = viewModel
+            self.getProfileViewModel = viewModel
         }
+        
+        func displayFreshObjects(viewModel: Dashboard.GetNewObjects.ViewModel) {
+            displayFreshObjectsCalled = true
+            self.objectsViewModel = viewModel
+        }
+        
     }
     
     // MARK: - Tests
@@ -64,10 +72,10 @@ class DashboardPresenterTests: XCTestCase {
         sut.presentProfile(response: response)
         
         // Then
-        let viewModel = profileDataDisplayLogicSpy.viewModel
-        let titleDisplayed = viewModel!.title
-        let nameDisplayed = viewModel!.name
-        let userObjectsDisplayed = viewModel!.userObjects
+        let profileViewModel = profileDataDisplayLogicSpy.getProfileViewModel
+        let titleDisplayed = profileViewModel!.title
+        let nameDisplayed = profileViewModel!.name
+        let userObjectsDisplayed = profileViewModel!.userObjects
         
         XCTAssertEqual(userObjectsDisplayed[0], "ship", "Presenting fetched object should properly represent the object from the user")
         XCTAssertEqual(userObjectsDisplayed[1], "sword", "Presenting fetched object should properly represent the object from the user")

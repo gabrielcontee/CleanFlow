@@ -12,6 +12,7 @@ protocol DashboardBusinessLogic {
     func getProfile(request: Dashboard.GetProfile.Request)
     func refreshObjects(request: Dashboard.GetNewObjects.Request)
 }
+
 protocol DashboardDataStore: class {
     var profile: Profile? { get set }
     var userObjects: [String] { get set }

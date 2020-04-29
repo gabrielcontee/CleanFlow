@@ -120,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE13B319245A3CF3004C2402 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DEB995172447A2BB00CF02B8 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		DE4CB1EB2448D8D5009DE7B5 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +184,7 @@
 		DEB994E5244781CE00CF02B8 /* CleanFlow */ = {
 			isa = PBXGroup;
 			children = (
+				DE13B319245A3CF3004C2402 /* Common */,
 				DEB9951424479EAC00CF02B8 /* Shared */,
 				DEB995082447823600CF02B8 /* Scenes */,
 				DEB994E6244781CE00CF02B8 /* AppDelegate.swift */,
@@ -227,7 +236,6 @@
 				DEEE38DC2458DC6100EB1381 /* Keys */,
 				DEC6CD19245778A200FD072D /* DatabaseManager */,
 				DE4CB1F42448E454009DE7B5 /* Models */,
-				DEB995172447A2BB00CF02B8 /* Extensions */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
