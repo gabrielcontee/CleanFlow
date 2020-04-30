@@ -1,0 +1,16 @@
+PODS:
+  - Registration (0.1.0)
+
+DEPENDENCIES:
+  - Registration (from `../`)
+
+EXTERNAL SOURCES:
+  Registration:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Registration: 4d510cb5bdf1ea2eadfa4d81f7593b4d31b14a93
+
+PODFILE CHECKSUM: dc4700fc16acf5aa56cde6bb9474144876c861b7
+
+COCOAPODS: 1.9.1

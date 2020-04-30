@@ -1,0 +1,6 @@
+framework module Registration {
+  umbrella header "Registration-umbrella.h"
+
+  export *
+  module * { export * }
+}

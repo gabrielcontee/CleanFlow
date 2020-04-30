@@ -1,0 +1,22 @@
+{
+  "name": "Registration",
+  "version": "0.1.0",
+  "summary": "A short description of Registration.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gabrielcontee/Registration",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gabrielcontee": "gabrielconte14@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/gabrielcontee/Registration.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Registration/Classes/**/*"
+}

@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+workspace 'CleanFlow.xcworkspace'
+project 'CleanFlow.xcodeproj'
+
+def registration_pod
+  pod 'Registration', :path => 'DevPods/Registration', :testspecs => ['UnitTests']
+end
+
+def development_pods
+  registration_pod
+end
+
+target 'CleanFlow' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  development_pods
+
+  # Pods for CleanFlow
+
+  target 'CleanFlowTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'Registration_Example' do
+  use_frameworks!
+  project 'DevPods/Registration/Example/Registration.xcodeproj'
+  
+  registration_pod
+end
+  

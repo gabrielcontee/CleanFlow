@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Registration_Example' do
+  pod 'Registration', :path => '../'
+
+  target 'Registration_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

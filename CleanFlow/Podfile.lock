@@ -1,0 +1,18 @@
+PODS:
+  - Registration (0.1.0)
+  - Registration/UnitTests (0.1.0)
+
+DEPENDENCIES:
+  - Registration (from `DevPods/Registration`)
+  - Registration/UnitTests (from `DevPods/Registration`)
+
+EXTERNAL SOURCES:
+  Registration:
+    :path: DevPods/Registration
+
+SPEC CHECKSUMS:
+  Registration: ecc8c80361d14e9ca98a969fb4f983accfb8a64c
+
+PODFILE CHECKSUM: c540ab7f44f95225865ff1a7a7a32801835c7eb9
+
+COCOAPODS: 1.9.1

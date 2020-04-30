@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Registration
 
 protocol WelcomeDisplayLogic: class {
     func displayLogin(viewModel: Welcome.Login.ViewModel)
@@ -26,7 +27,11 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
         interactor?.login(request: loginRequest)
     }
     
-    @IBAction func registerPressed(_ sender: Any) {}
+    @IBAction func registerPressed(_ sender: Any) {
+        let mock = RegisterWorker()
+        let mockMsg = mock.register(username: "", password: "")
+        self.showAlert(title: mockMsg, message: mockMsg)
+    }
     
     func displayLogin(viewModel: Welcome.Login.ViewModel) {
         if viewModel.success {
@@ -38,6 +43,5 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
     
     func displayRegister(viewModel: Welcome.Register.ViewModel) {
         // TO DO
-        
     }
 }
