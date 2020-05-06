@@ -17,9 +17,23 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     
     private let objectCellIdentifier = "objectCellIdentifier"
     
+    enum Section: CaseIterable {
+        case main
+    }
+    
+    typealias DataSource = UITableViewDiffableDataSource<Section, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, String>
+    
     @IBOutlet weak var objectsTableView: UITableView! {
         didSet {
             objectsTableView.register(UITableViewCell.self, forCellReuseIdentifier: objectCellIdentifier)
+        }
+    }
+    
+    @IBOutlet weak var objectsSearchBar: UISearchBar! {
+        didSet {
+            objectsSearchBar.delegate = self
+            objectsSearchBar.textColor = .white
         }
     }
     
@@ -27,6 +41,8 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     var router: (DashboardDataPassing & DashboardRoutingLogic)?
     
     var displayedObjects: [String] = []
+    var objectFilter: String?
+    var dataSource: DataSource!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -42,6 +58,7 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
         super.viewDidLoad()
         
         self.largeNavBar()
+        setupObjectsTableViewDS()
         let request = Dashboard.GetProfile.Request()
         interactor?.getProfile(request: request)
     }
@@ -71,7 +88,7 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
             setupUI(userImage: userImage)
         }
         
-        objectsTableView.reloadData()
+        updateTableData(objects: displayedObjects)
     }
     
     func requestObjectsRefresh(){
@@ -82,6 +99,45 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
         
         displayedObjects = viewModel.userObjects
         self.objectsTableView.reloadData()
+    }
+    
+    private func setupObjectsTableViewDS(){
+        dataSource = UITableViewDiffableDataSource<Section, String>(tableView: objectsTableView) { (objectsTableView: UITableView, indexPath: IndexPath, object: String) -> UITableViewCell? in
+            
+            let cell = objectsTableView.dequeueReusableCell(withIdentifier: self.objectCellIdentifier, for: indexPath) as UITableViewCell
+            cell.backgroundColor = .clear
+            
+            if self.displayedObjects.count > indexPath.row {
+                cell.textLabel?.text = self.displayedObjects[indexPath.row]
+                cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
+                cell.textLabel?.textColor = .white
+            }
+            
+            return cell
+        }
+    }
+    
+    func performQuery(with text: String) {
+        
+        print("filtro: \(text)")
+        guard text != "" else {
+            updateTableData(objects: displayedObjects)
+            return
+        }
+        
+        let objs = displayedObjects.filter({
+            $0.range(of: text, options: .caseInsensitive) != nil
+        })
+        print(objs)
+    
+        updateTableData(objects: objs)
+    }
+    
+    private func updateTableData(objects: [String]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(objects)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
     
     private func setupUI(userImage: UIImage) {
@@ -101,9 +157,14 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
                                               constant: -Const.ImageBottomMarginForLargeState),
             imageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
-            ])
+        ])
     }
+}
 
+extension DashboardViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        performQuery(with: searchText)
+    }
 }
 
 private struct Const {
@@ -114,25 +175,4 @@ private struct Const {
     static let ImageSizeForSmallState: CGFloat = 32
     static let NavBarHeightSmallState: CGFloat = 44
     static let NavBarHeightLargeState: CGFloat = 96.5
-}
-
-extension DashboardViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayedObjects.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: objectCellIdentifier, for: indexPath) as UITableViewCell
-        cell.backgroundColor = .clear
-        
-        if displayedObjects.count > indexPath.row {
-            cell.textLabel?.text = displayedObjects[indexPath.row]
-            cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: .medium)
-            cell.textLabel?.textColor = .white
-        }
-        
-        return cell
-    }
-    
 }
