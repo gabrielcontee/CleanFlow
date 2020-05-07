@@ -137,9 +137,8 @@ class DashboardViewController: UIViewController, DashboardDisplayLogic  {
     }
     
     func displayFreshObjects(viewModel: Dashboard.GetNewObjects.ViewModel) {
-        
         displayedObjects = viewModel.userObjects
-        self.objectsTableView.reloadData()
+        self.updateTableData(objects: displayedObjects)
     }
     
     func displayFilteredObjects(viewModel: Dashboard.FilterObjects.ViewModel){
