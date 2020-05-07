@@ -43,7 +43,7 @@
                             <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                         </searchBar>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RHA-aA-pUT">
-                            <rect key="frame" x="0.0" y="56" width="414" height="728"/>
+                            <rect key="frame" x="8" y="56" width="398" height="720"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="J6Y-9N-Ff0"/>
@@ -57,9 +57,9 @@
                         <constraint firstAttribute="trailing" secondItem="BUV-gF-XZA" secondAttribute="trailing" id="Ewe-aP-ypB"/>
                         <constraint firstItem="RHA-aA-pUT" firstAttribute="top" secondItem="BUV-gF-XZA" secondAttribute="bottom" id="FGB-sv-Odg"/>
                         <constraint firstItem="RHA-aA-pUT" firstAttribute="top" secondItem="BUV-gF-XZA" secondAttribute="bottom" id="eUt-oh-Bnd"/>
-                        <constraint firstAttribute="trailing" secondItem="RHA-aA-pUT" secondAttribute="trailing" id="qAm-zY-eMY"/>
-                        <constraint firstItem="RHA-aA-pUT" firstAttribute="leading" secondItem="p6r-9t-mhM" secondAttribute="leading" id="wPm-ML-jTN"/>
-                        <constraint firstAttribute="bottom" secondItem="RHA-aA-pUT" secondAttribute="bottom" id="z8j-wS-nWB"/>
+                        <constraint firstAttribute="trailing" secondItem="RHA-aA-pUT" secondAttribute="trailing" constant="8" id="qAm-zY-eMY"/>
+                        <constraint firstItem="RHA-aA-pUT" firstAttribute="leading" secondItem="p6r-9t-mhM" secondAttribute="leading" constant="8" id="wPm-ML-jTN"/>
+                        <constraint firstAttribute="bottom" secondItem="RHA-aA-pUT" secondAttribute="bottom" constant="8" id="z8j-wS-nWB"/>
                     </constraints>
                 </view>
             </subviews>
