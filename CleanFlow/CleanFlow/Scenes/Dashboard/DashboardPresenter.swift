@@ -11,6 +11,7 @@ import UIKit
 protocol DashboardPresentLogic: class {
     func presentProfile(response:  Dashboard.GetProfile.Response)
     func presentRefreshedObjects(response: Dashboard.GetNewObjects.Response)
+    func presentFilteredObjects(response: Dashboard.FilterObjects.Response)
 }
 
 class DashboardPresenter: DashboardPresentLogic {
@@ -25,5 +26,10 @@ class DashboardPresenter: DashboardPresentLogic {
     func presentRefreshedObjects(response: Dashboard.GetNewObjects.Response) {
         let viewModel = Dashboard.GetNewObjects.ViewModel(userObjects: response.userObjects)
         viewController?.displayFreshObjects(viewModel: viewModel)
+    }
+    
+    func presentFilteredObjects(response: Dashboard.FilterObjects.Response) {
+        let viewModel = Dashboard.FilterObjects.ViewModel(userObjects: response.userObjects)
+        viewController?.displayFilteredObjects(viewModel: viewModel)
     }
 }

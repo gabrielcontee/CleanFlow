@@ -39,4 +39,20 @@ enum Dashboard {
         }
     }
     
+    enum FilterObjects {
+        
+        struct Request {
+            var text: String
+            var currentObjects: [String]
+        }
+        
+        struct Response {
+            var userObjects: [String]
+        }
+        
+        struct ViewModel {
+            var userObjects: [String]
+        }
+    }
+    
 }

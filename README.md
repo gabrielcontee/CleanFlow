@@ -13,6 +13,7 @@ Clean Swift with Xibs
 ## Features
 
 Unit Tests: 42% coverage
+Diffable data source diffable
   
 ## How to install
 

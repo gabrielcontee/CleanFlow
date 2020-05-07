@@ -11,6 +11,7 @@
 		DE15153D2453A62A00CF3F2C /* NewObjectPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE15153C2453A62A00CF3F2C /* NewObjectPresenter.swift */; };
 		DE2FBCD5244A16C7003B9FC3 /* DashboardWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */; };
 		DE2FBCD7244A4A40003B9FC3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2FBCD6244A4A40003B9FC3 /* UIView.swift */; };
+		DE4733FD246381EF00B33CB9 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4733FC246381EF00B33CB9 /* UISearchBar.swift */; };
 		DE4CB1E72448D1D4009DE7B5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */; };
 		DE4CB1E82448D1D4009DE7B5 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */; };
 		DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */; };
@@ -62,6 +63,7 @@
 		DE15153C2453A62A00CF3F2C /* NewObjectPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewObjectPresenter.swift; sourceTree = "<group>"; };
 		DE2FBCD4244A16C7003B9FC3 /* DashboardWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardWorker.swift; sourceTree = "<group>"; };
 		DE2FBCD6244A4A40003B9FC3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		DE4733FC246381EF00B33CB9 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		DE4CB1E52448D1D4009DE7B5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DE4CB1E62448D1D4009DE7B5 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		DE4CB1E92448D2ED009DE7B5 /* WelcomeViewConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewConfigurator.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				DEB995182447A33500CF02B8 /* UIViewController.swift */,
 				DE2FBCD6244A4A40003B9FC3 /* UIView.swift */,
 				DEEE38DF2459B71100EB1381 /* NavigationController.swift */,
+				DE4733FC246381EF00B33CB9 /* UISearchBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				DEB994E9244781CE00CF02B8 /* SceneDelegate.swift in Sources */,
 				DE4CB1EA2448D2ED009DE7B5 /* WelcomeViewConfigurator.swift in Sources */,
 				DEB9950F2447844B00CF02B8 /* WelcomeInteractor.swift in Sources */,
+				DE4733FD246381EF00B33CB9 /* UISearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

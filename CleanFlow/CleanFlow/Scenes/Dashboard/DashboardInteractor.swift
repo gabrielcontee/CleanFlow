@@ -11,6 +11,7 @@ import UIKit
 protocol DashboardBusinessLogic {
     func getProfile(request: Dashboard.GetProfile.Request)
     func refreshObjects(request: Dashboard.GetNewObjects.Request)
+    func filterObjects(request: Dashboard.FilterObjects.Request)
 }
 
 protocol DashboardDataStore: class {
@@ -38,5 +39,24 @@ class DashboardInteractor: DashboardDataStore, DashboardBusinessLogic {
         let objects = worker.getUserObjects()
         let response = Dashboard.GetNewObjects.Response(userObjects: objects)
         presenter?.presentRefreshedObjects(response: response)
+    }
+    
+    func filterObjects(request: Dashboard.FilterObjects.Request) {
+        
+        let text = request.text
+        let currentObjects = request.currentObjects
+        
+        guard text != "" else {
+            let response = Dashboard.FilterObjects.Response(userObjects: currentObjects)
+            presenter?.presentFilteredObjects(response: response)
+            return
+        }
+        
+        let filteredObjs = currentObjects.filter({
+            $0.range(of: text, options: .caseInsensitive) != nil
+        })
+    
+        let response = Dashboard.FilterObjects.Response(userObjects: filteredObjs)
+        presenter?.presentFilteredObjects(response: response)
     }
 }

@@ -21,6 +21,11 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
     var interactor: WelcomeBusinessLogic?
     var router: (WelcomeRoutingLogic & WelcomeDataPassing)?
     
+    override func viewDidLoad() {
+        nameTextField.text = "gabriel"
+        passwordTextField.text = "12345"
+    }
+    
     @IBAction func loginPressed(_ sender: Any) {
         let loginRequest = Welcome.Login.Request(name: nameTextField.text, password: passwordTextField.text)
         interactor?.login(request: loginRequest)
@@ -38,6 +43,5 @@ class WelcomeViewController: UIViewController, WelcomeDisplayLogic {
     
     func displayRegister(viewModel: Welcome.Register.ViewModel) {
         // TO DO
-        
     }
 }
